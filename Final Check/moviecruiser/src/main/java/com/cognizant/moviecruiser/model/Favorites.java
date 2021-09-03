@@ -1,6 +1,5 @@
 package com.cognizant.moviecruiser.model;
 
-
 import java.util.List;
 
 public class Favorites {
@@ -33,5 +32,6 @@ public class Favorites {
 	public String toString() {
 		return "Favorites [movieList=" + movieList + ", noOfFavorites=" + noOfFavorites + "]";
 	}
+
 
 }
