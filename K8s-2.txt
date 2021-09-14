@@ -1,0 +1,248 @@
+C:\Users\hi>cd Downloads
+
+C:\Users\hi\Downloads>DockerDemo
+'DockerDemo' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hi\Downloads>cd DockerDemo
+
+C:\Users\hi\Downloads\DockerDemo>Docker build -f Dockerfile -t DockerDemo .
+invalid argument "DockerDemo" for "-t, --tag" flag: invalid reference format: repository name must be lowercase
+See 'docker build --help'.
+
+C:\Users\hi\Downloads\DockerDemo>docker build -f Dockerfile -t DockerDemo .
+invalid argument "DockerDemo" for "-t, --tag" flag: invalid reference format: repository name must be lowercase
+See 'docker build --help'.
+
+C:\Users\hi\Downloads\DockerDemo>docker build --help
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+
+Options:
+      --add-host list           Add a custom host-to-IP mapping (host:ip)
+      --build-arg list          Set build-time variables
+      --cache-from strings      Images to consider as cache sources
+      --disable-content-trust   Skip image verification (default true)
+  -f, --file string             Name of the Dockerfile (Default is
+                                'PATH/Dockerfile')
+      --iidfile string          Write the image ID to the file
+      --isolation string        Container isolation technology
+      --label list              Set metadata for an image
+      --network string          Set the networking mode for the RUN
+                                instructions during build (default "default")
+      --no-cache                Do not use cache when building the image
+  -o, --output stringArray      Output destination (format:
+                                type=local,dest=path)
+      --platform string         Set platform if server is multi-platform
+                                capable
+      --progress string         Set type of progress output (auto, plain,
+                                tty). Use plain to show container output
+                                (default "auto")
+      --pull                    Always attempt to pull a newer version of
+                                the image
+  -q, --quiet                   Suppress the build output and print image
+                                ID on success
+      --secret stringArray      Secret file to expose to the build (only
+                                if BuildKit enabled):
+                                id=mysecret,src=/local/secret
+      --ssh stringArray         SSH agent socket or keys to expose to the
+                                build (only if BuildKit enabled) (format:
+                                default|<id>[=<socket>|<key>[,<key>]])
+  -t, --tag list                Name and optionally a tag in the
+                                'name:tag' format
+      --target string           Set the target build stage to build.
+[+] Building 120.3s (8/8) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                            1.5s
+ => => transferring dockerfile: 154B                                                                                                            0.5s
+ => [internal] load .dockerignore                                                                                                               1.1s
+ => => transferring context: 2B                                                                                                                 0.4s
+ => [internal] load metadata for docker.io/library/openjdk:8                                                                                    8.0s
+ => [auth] library/openjdk:pull token for registry-1.docker.io                                                                                  0.0s
+ => [1/2] FROM docker.io/library/openjdk:8@sha256:4af8aa613bcad1e9dd24978a9cec9e9fd9641a2789e12bfa3b49234da2b01b2e                             99.8s
+ => => resolve docker.io/library/openjdk:8@sha256:4af8aa613bcad1e9dd24978a9cec9e9fd9641a2789e12bfa3b49234da2b01b2e                              0.5s
+ => => sha256:4af8aa613bcad1e9dd24978a9cec9e9fd9641a2789e12bfa3b49234da2b01b2e 1.04kB / 1.04kB                                                  0.0s
+ => => sha256:76578921073d9c39c3c53e7717e88b389820749891b3fac6564f4a0ea4347d1a 1.79kB / 1.79kB                                                  0.0s
+ => => sha256:08121337b7a4972212918a3fa235acd34442af8c2dafbea92fa7a7f54f9dc2c4 7.81kB / 7.81kB                                                  0.0s
+ => => sha256:955615a668ce169f8a1443fc6b6e6215f43fe0babfb4790712a2d3171f34d366 54.93MB / 54.93MB                                               22.7s
+ => => sha256:911ea9f2bd51e53a455297e0631e18a72a86d7e2c8e1807176e80f991bde5d64 10.87MB / 10.87MB                                                6.1s
+ => => sha256:2756ef5f69a5190f4308619e0f446d95f5515eef4a814dbad0bcebbbbc7b25a8 5.15MB / 5.15MB                                                  4.6s
+ => => sha256:27b0a22ee906271a6ce9ddd1754fdd7d3b59078e0b57b6cc054c7ed7ac301587 54.57MB / 54.57MB                                               26.0s
+ => => sha256:785dffb36c6c7fbfd1c98d950a9b49054e84bccdd4b54ebfab50b0e93dbfeefe 5.42MB / 5.42MB                                                  9.7s
+ => => sha256:a83d4d9f417102ab5adf274b0cb1cabca8332b8c7931b50e6dc35cc1cc357824 207B / 207B                                                     10.8s
+ => => sha256:88ab6c8cf10d06acbe1d3594aff80604ae82a4f71a27afef22ca6ff57d1e7988 105.99MB / 105.99MB                                             35.5s
+ => => extracting sha256:955615a668ce169f8a1443fc6b6e6215f43fe0babfb4790712a2d3171f34d366                                                      14.0s
+ => => extracting sha256:2756ef5f69a5190f4308619e0f446d95f5515eef4a814dbad0bcebbbbc7b25a8                                                       0.7s
+ => => extracting sha256:911ea9f2bd51e53a455297e0631e18a72a86d7e2c8e1807176e80f991bde5d64                                                       0.8s
+ => => extracting sha256:27b0a22ee906271a6ce9ddd1754fdd7d3b59078e0b57b6cc054c7ed7ac301587                                                       8.6s
+ => => extracting sha256:785dffb36c6c7fbfd1c98d950a9b49054e84bccdd4b54ebfab50b0e93dbfeefe                                                       0.7s
+ => => extracting sha256:a83d4d9f417102ab5adf274b0cb1cabca8332b8c7931b50e6dc35cc1cc357824                                                       0.0s
+ => => extracting sha256:88ab6c8cf10d06acbe1d3594aff80604ae82a4f71a27afef22ca6ff57d1e7988                                                      14.9s
+ => [internal] load build context                                                                                                               3.2s
+ => => transferring context: 17.07MB                                                                                                            2.3s
+ => [2/2] ADD target/docker-demo.jar docker-demo.jar                                                                                            4.6s
+ => exporting to image                                                                                                                          4.4s
+ => => exporting layers                                                                                                                         2.4s
+ => => writing image sha256:1d3b14ef1d651aa283c6825685495667479a4226090d3cfb81dbf581b8df9478                                                    0.3s
+ => => naming to docker.io/library/docker-demo                                                                                                  0.3s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+C:\Users\hi\Downloads\DockerDemo>docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
+docker-demo                   latest    1d3b14ef1d65   28 seconds ago   543MB
+gcr.io/k8s-minikube/kicbase   v0.0.26   b0c9ec980b3d   11 days ago      1.08GB
+
+C:\Users\hi\Downloads\DockerDemo>docker tag docker-demo garikapatisahithi/hello_world
+
+C:\Users\hi\Downloads\DockerDemo>docker push garikapatisahithi/hello_world
+Using default tag: latest
+The push refers to repository [docker.io/garikapatisahithi/hello_world]
+131af3192a8f: Pushed
+d9b6ea8e7d5f: Mounted from library/openjdk
+9cb5eb95298c: Mounted from library/openjdk
+00ef5416d927: Mounted from library/openjdk
+8555e663f65b: Mounted from library/openjdk
+d00da3cd7763: Mounted from library/openjdk
+4e61e63529c2: Mounted from library/openjdk
+799760671c38: Mounted from library/openjdk
+latest: digest: sha256:ea2f98c411c644bdec568be1f009f0dea96b7003fc0951ea8073f646de89b512 size: 2007
+
+C:\Users\hi\Downloads\DockerDemo>Minikube start
+* minikube v1.23.0 on Microsoft Windows 10 Pro 10.0.19043 Build 19043
+* Using the docker driver based on existing profile
+
+X Exiting due to PROVIDER_DOCKER_NOT_RUNNING: deadline exceeded running "docker version --format -": exit status 1
+* Suggestion: Restart the Docker service
+* Documentation: https://minikube.sigs.k8s.io/docs/drivers/docker/
+
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+error: the server doesn't have a resource type "pods"
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+error: the server doesn't have a resource type "pods"
+
+C:\Users\hi\Downloads\DockerDemo>docker version
+Client:
+ Cloud integration: 1.0.17
+ Version:           20.10.8
+ API version:       1.41
+ Go version:        go1.16.6
+ Git commit:        3967b7d
+ Built:             Fri Jul 30 19:58:50 2021
+ OS/Arch:           windows/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.8
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.6
+  Git commit:       75249d8
+  Built:            Fri Jul 30 19:52:10 2021
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.4.9
+  GitCommit:        e25210fe30a0a703442421b0f60afac609f950a3
+ runc:
+  Version:          1.0.1
+  GitCommit:        v1.0.1-0-g4144b63
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+C:\Users\hi\Downloads\DockerDemo>Minikube start
+* minikube v1.23.0 on Microsoft Windows 10 Pro 10.0.19043 Build 19043
+* Using the docker driver based on existing profile
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+* Restarting existing docker container for "minikube" ...
+* Preparing Kubernetes v1.22.1 on Docker 20.10.8 ...
+* Verifying Kubernetes components...
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 5.2058455s
+* Restarting the docker service may improve performance.
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: storage-provisioner, default-storageclass
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+No resources found in default namespace.
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+No resources found in default namespace.
+
+C:\Users\hi\Downloads\DockerDemo>kubectl run service
+Error: required flag(s) "image" not set
+
+C:\Users\hi\Downloads\DockerDemo>kubectl run service --image garikapatisahithi/hello_world
+pod/service created
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME      READY   STATUS              RESTARTS   AGE
+service   0/1     ContainerCreating   0          8s
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME      READY   STATUS              RESTARTS   AGE
+service   0/1     ContainerCreating   0          15s
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME      READY   STATUS              RESTARTS   AGE
+service   0/1     ContainerCreating   0          76s
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME      READY   STATUS    RESTARTS   AGE
+service   1/1     Running   0          7m59s
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl port-forward service 8080:8080
+Unable to listen on port 8080: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 127.0.0.1:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions. unable to create listener: Error listen tcp6 [::1]:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions.]
+error: unable to listen on any of the requested ports: [{8080 8080}]
+
+C:\Users\hi\Downloads\DockerDemo>kubectl run greet-service --image garikapatisahithi/hello_world
+pod/greet-service created
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl port-forward greet-service 8080:8080
+error: unable to forward port because pod is not running. Current status=Pending
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME            READY   STATUS              RESTARTS   AGE
+greet-service   0/1     ContainerCreating   0          28s
+service         1/1     Running             0          11m
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl get pods
+NAME            READY   STATUS    RESTARTS   AGE
+greet-service   1/1     Running   0          37s
+service         1/1     Running   0          11m
+
+C:\Users\hi\Downloads\DockerDemo>kubectl run greet-service --image garikapatisahithi/hello_world
+Error from server (AlreadyExists): pods "greet-service" already exists
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl port-forward greet-service 8080:8080
+Unable to listen on port 8080: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 127.0.0.1:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions. unable to create listener: Error listen tcp6 [::1]:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions.]
+error: unable to listen on any of the requested ports: [{8080 8080}]
+
+C:\Users\hi\Downloads\DockerDemo>Kubectl port-forward greet-service 8080:8080
+Unable to listen on port 8080: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 127.0.0.1:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions. unable to create listener: Error listen tcp6 [::1]:8080: bind: An attempt was made to access a socket in a way forbidden by its access permissions.]
+error: unable to listen on any of the requested ports: [{8080 8080}]
+C:\Users\hi\Downloads\DockerDemo>Kubectl port-forward greet-service 9090:8080
+Forwarding from 127.0.0.1:9090 -> 8080
+Forwarding from [::1]:9090 -> 8080
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090
+Handling connection for 9090

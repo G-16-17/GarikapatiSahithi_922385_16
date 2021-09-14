@@ -1,0 +1,48 @@
+C:\Users\hi>minikube start --driver=docker
+* minikube v1.23.0 on Microsoft Windows 10 Pro 10.0.19043 Build 19043
+* Using the docker driver based on user configuration
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+    > gcr.io/k8s-minikube/kicbase: 355.82 MiB / 355.82 MiB  100.00% 7.21 MiB p/
+* Creating docker container (CPUs=2, Memory=2200MB) ...
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 13.5014149s
+* Restarting the docker service may improve performance.
+* Preparing Kubernetes v1.22.1 on Docker 20.10.8 ...
+  - Generating certificates and keys ...
+  - Booting up control plane ...
+  - Configuring RBAC rules ...
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: default-storageclass, storage-provisioner
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+C:\Users\hi>Minikube status
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 7.1685463s
+* Restarting the docker service may improve performance.
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+
+C:\Users\hi>Minikube stop
+* Stopping node "minikube"  ...
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 5.845164s
+* Restarting the docker service may improve performance.
+* Powering off "minikube" via SSH ...
+* 1 nodes stopped.
+
+C:\Users\hi>Minikube status
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.5558984s
+* Restarting the docker service may improve performance.
+minikube
+type: Control Plane
+host: Stopped
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Stopped
+
+
+C:\Users\hi>
